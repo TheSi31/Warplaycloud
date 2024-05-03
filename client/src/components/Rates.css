@@ -1,0 +1,91 @@
+.rates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.rates__top{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.rates__content{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.rates__box {
+    width: 300px;
+    height: 425px;
+    padding-top: 15px;
+    border-radius: 3px;
+    background-color: rgba(31, 38, 49, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rates__box-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    height: 80%;
+}
+.rates__box-content h2{
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    width: 50%;
+}
+.rates__box-content h3{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+.rates__box-content p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(171, 171, 171, 1);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.rates__box-content button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 197, 255, 1);
+    color:black;
+    font-family: 'Aire Exterior';
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.rates__box:hover{
+    box-shadow: 0px 0px 30px 5px rgba(77, 79, 80, 0.25);
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-out;  
+}
+.rates__box[class='rates__box 2'] {
+    background-color: rgba(87, 214, 255, 1);
+}
+.rates__box[class='rates__box 2'] button {
+    color: white;
+    background-color: rgba(20, 28, 36, 1);
+}
+.rates__box[class='rates__box 2'] h2,.rates__box[class='rates__box 2'] p,.rates__box[class='rates__box 2'] h3 {
+    color: black;
+}
+.rates__box[class='rates__box 2']:hover{
+    box-shadow: 0px 0px 30px 5px rgba(87, 214, 255, 0.25);
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-out;  
+}
+#bottom-line {
+    width: 50%;
+    height: 1px;
+    background-color: rgba(87, 214, 255, 1);
+}

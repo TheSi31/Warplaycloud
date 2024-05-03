@@ -1,0 +1,52 @@
+.footer{
+    width: 100%;
+    background-color: rgba(23, 23, 23, 1);
+    display: flex;
+    align-items: center;
+    height: 150px;
+    color: white;
+}
+.container{
+    width: 85%;
+    margin-left: 100px;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+.footer__logo-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.footer__logo-link a{
+    font-family: 'Aire Exterior';
+    font-size: 24px;
+    font-weight: 400;
+    color:white;
+    text-decoration: none;
+}
+.footer__copyright h4{
+    font-family: "Aire Exterior";
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 14.06px;
+    text-align: left;
+}
+.footer__links{
+    display: flex;
+    gap:25px;
+    align-items: flex-end;
+    margin-left: auto;
+}
+.footer__links h4{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 14.06px;
+    text-align: left;
+}

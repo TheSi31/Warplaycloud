@@ -1,0 +1,40 @@
+.menu{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: #141C24;
+    width: 100%;
+    padding: 35px;
+}
+.logo{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.logo h3{
+    font-family: "Exo 2", sans-serif;
+    color:#57D6FF;
+    font-size: 24px;
+    font-weight: 700;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.menu li{
+    flex-grow: 1;
+}
+li:first-child{
+    padding-left: 10%;
+}
+.menu li a{
+    font-family: "Exo 2", sans-serif;
+    color: #929292;
+    text-decoration: none;
+}
+.menu li a.active {
+    color: white;
+}
+

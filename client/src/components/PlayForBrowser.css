@@ -1,0 +1,103 @@
+.play-for-browser{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.play-for-browser__content{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.play-for-browser__title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.play-for-browser__title span{
+    width: 100px;
+    height: 3px;
+    background-color: rgba(87, 214, 255, 1);
+}
+.play-for-browser__content p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(171, 171, 171, 1);
+}
+.play-for-browser__title p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(87, 214, 255, 1);
+}
+.play-for-browser__content h2{
+    font-family: 'Aire Exterior';
+    font-size: 39px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 100px;
+}
+.play-for-browser__content a{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(87, 214, 255, 1);
+    text-decoration: none;
+    color: rgba(0, 197, 255, 1);
+    padding: 5px 3px; 
+    border-bottom: 1px solid rgba(0, 197, 255, 1);
+}
+
+.play-for-browser__image{
+    height: 750px;
+}
+.play-for-browser__image img{
+    width: 600px;
+    transform: matrix(0.87, -0.5, 0.87, 0.5, 0, 0);   
+    border-radius: 3px;
+    position: relative;
+    transform-style: flat;
+}
+.play-for-browser__image img:nth-child(1) {
+    left: 40%;
+    top: 8%;
+    z-index: 0; /* первая фотка будет ниже всех */
+}
+
+.play-for-browser__image img:nth-child(2) {
+    left: 70%;
+    bottom: 35%;
+    z-index: 1; /* вторая фотка будет выше всех */
+}
+
+.play-for-browser__image img:nth-child(3) {
+    left: 65%;
+    bottom: 45%;
+    z-index: -1; /* третья фотка будет посередине */
+}
+.image-visible {
+    width: 600px;
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity 1s ease;
+    animation: slideIn 1s ease forwards;
+
+}
+  
+.image-hidden {
+    width: 0;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+  
+@keyframes slideIn {
+    from {
+      transform:translateX(100%);
+    }
+    to {
+      transform:matrix(0.87, -0.5, 0.87, 0.5, 0, 0);
+    }
+}
+  

@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Aire Exterior';
+    src: local('Aire Exterior'),
+      url('../fonts/AireExterior.ttf') format('truetype');
+  }
+.slider {
+    width: 90vw;
+    height: 110vh;
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    z-index: 0;
+}
+.slider__item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 13px 30px 15px rgba(87, 214, 255, 0.25);
+}
+
+.slider__item::before{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:rgba(0, 0, 0, .4);
+    border-radius: inherit;
+    z-index: -1;
+}
+.slider__item.active {
+    display: block;      
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.slider__content {
+    width: 100%;
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    
+}
+.slider__title{
+    font-size: 16px;
+    font-weight: 500;
+}
+.slider__subtitle{
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+    padding-bottom: 100px;
+}
+.slider__upgrade-btn {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    background-image: linear-gradient(225deg, transparent 9px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 202px, transparent 203px, transparent);
+    border: none;
+    border-top-right-radius: 0; /* Стреляем правым верхним углом */
+    position: relative;
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+.slider__upgrade-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0; /* Размещаем псевдоэлемент в правом верхнем углу */
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent; /* Прозрачный правый верхний угол */
+    border-top: 10px solid transparent; /* Прозрачный правый верхний угол */
+    background-color: transparent; /* Делаем цвет фона псевдоэлемента прозрачным */
+    background-image: none; /* Отключаем фоновое изображение */
+}
+.slider__upgrade-btn:hover{
+    cursor: pointer;
+    animation: hoverButton 0.3s ease-in-out forwards;
+}
+
+.top-line {
+    width: 1px;
+    height: 77px;
+    background-color: rgba(255, 255, 255, 0.45);
+    position: absolute;
+    z-index: 2;
+    top: 130px;
+}
+.bottom-line {
+    width: 1px;
+    height: 132px;
+    background-color: rgba(255, 255, 255, 0.45);
+    position: absolute;
+    bottom: -95px;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        mix-blend-mode: multiply;
+    }
+}
+
+@keyframes energyDischarge {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        mix-blend-mode: multiply;
+    }
+    to {
+        opacity: 1;    
+    }    
+}
+@keyframes hoverButton {
+    to {
+        color: rgba(87, 214, 255, 1);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slider{
+        width: 100vw;    
+    }
+}
+
+
