@@ -23,11 +23,7 @@ const PlayForBrowser = () => {
                     </Link>
                 </div>
             </div>
-            <div className='play-for-browser__image'>
-                <ImageC src={Image_2}></ImageC>
-                <ImageC src={Image_1}></ImageC>
-                <ImageC src={Image_3}></ImageC>
-            </div>
+                <ImageC images={[Image_2, Image_1, Image_3]} />
         </div>
     );
 }

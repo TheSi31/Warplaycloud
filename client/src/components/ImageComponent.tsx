@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-type Props = {
-  src: string;
+type ImageProps = {
+  images: string[]; // Список изображений
   alt?: string;
 };
 
-const ImageComponent = ({ src, alt }: Props) => {
+const ImageComponent: React.FC<ImageProps> = ({ images, alt }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -20,12 +20,16 @@ const ImageComponent = ({ src, alt }: Props) => {
   }, [inView]);
 
   return (
-    <img
-      ref={ref}
-      src={src}
-      alt={alt}
-      className={isVisible ? 'image-visible' : 'image-hidden'}
-    />
+    <div ref={ref} className='play-for-browser__image'>
+      {images.map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={alt}
+          className={isVisible ? 'image-visible' : 'image-hidden'}
+        />
+      ))}
+    </div>
   );
 };
 
